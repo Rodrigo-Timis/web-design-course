@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Event Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f7fb;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 28px;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #cbd5e1;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #dbeafe;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .option-group {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .option-group legend {
+      font-weight: 600;
+      padding: 0 6px;
+    }
+
+    .inline-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .inline-options label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .inline-options input {
+      width: auto;
+      padding: 0;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button[type="submit"] {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+
+    button[type="reset"] {
+      background-color: #e5e7eb;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Sports Event Registration</h1>
+
+    <h2>Upcoming Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>City Marathon</td>
+          <td>2026-04-18</td>
+          <td>07:00</td>
+          <td>Central Park</td>
+        </tr>
+        <tr>
+          <td>Beach Volleyball Cup</td>
+          <td>2026-05-06</td>
+          <td>10:30</td>
+          <td>Sunset Beach Arena</td>
+        </tr>
+        <tr>
+          <td>Indoor Basketball League</td>
+          <td>2026-06-12</td>
+          <td>16:00</td>
+          <td>Downtown Sports Hall</td>
+        </tr>
+        <tr>
+          <td>Community Tennis Open</td>
+          <td>2026-07-03</td>
+          <td>09:00</td>
+          <td>Riverside Courts</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Register Here</h2>
+    <form id="registration-form" method="post">
+      <div>
+        <label for="full-name">Full Name *</label>
+        <input id="full-name" name="fullName" type="text" required />
+      </div>
+
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" />
+      </div>
+
+      <div>
+        <label for="confirm-password">Confirm Password</label>
+        <input id="confirm-password" name="confirmPassword" type="password" />
+      </div>
+
+      <div>
+        <label for="age">Age (16-80)</label>
+        <input id="age" name="age" type="number" min="16" max="80" />
+      </div>
+
+      <fieldset class="option-group">
+        <legend>Ticket Type</legend>
+        <div class="inline-options">
+          <label><input type="radio" name="ticketType" value="Standard" checked /> Standard</label>
+          <label><input type="radio" name="ticketType" value="VIP" /> VIP</label>
+          <label><input type="radio" name="ticketType" value="Student" /> Student</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="option-group">
+        <legend>Extra Options</legend>
+        <div class="inline-options">
+          <label><input type="checkbox" name="extras" value="Parking" /> Parking</label>
+          <label><input type="checkbox" name="extras" value="Meal" /> Meal</label>
+          <label><input type="checkbox" name="extras" value="Merchandise" /> Merchandise</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">-- Select a country --</option>
+          <option value="Romania">Romania</option>
+          <option value="Germany">Germany</option>
+          <option value="Spain">Spain</option>
+          <option value="United States">United States</option>
+          <option value="Japan">Japan</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="event-date">Event Date</label>
+        <input id="event-date" name="eventDate" type="date" />
+      </div>
+
+      <div>
+        <label for="arrival-time">Arrival Time</label>
+        <input id="arrival-time" name="arrivalTime" type="time" />
+      </div>
+
+      <div class="button-row">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    const registrationForm = document.getElementById("registration-form");
+    const passwordField = document.getElementById("password");
+    const confirmPasswordField = document.getElementById("confirm-password");
+    const ageField = document.getElementById("age");
+
+    registrationForm.addEventListener("submit", function (event) {
+      confirmPasswordField.setCustomValidity("");
+      ageField.setCustomValidity("");
+
+      if (passwordField.value !== confirmPasswordField.value) {
+        confirmPasswordField.setCustomValidity("Passwords must match.");
+      }
+
+      const ageValue = Number(ageField.value);
+      if (ageField.value && (ageValue < 16 || ageValue > 80)) {
+        ageField.setCustomValidity("Age must be between 16 and 80.");
+      }
+
+      if (!registrationForm.checkValidity()) {
+        event.preventDefault();
+        registrationForm.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>
