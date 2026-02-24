@@ -139,28 +139,28 @@
       </thead>
       <tbody>
         <tr>
-          <td>City Marathon</td>
+          <td>Running Race</td>
           <td>2026-04-18</td>
           <td>07:00</td>
-          <td>Central Park</td>
+          <td>Main Field</td>
         </tr>
         <tr>
-          <td>Beach Volleyball Cup</td>
+          <td>Volleyball Match</td>
           <td>2026-05-06</td>
           <td>10:30</td>
-          <td>Sunset Beach Arena</td>
+          <td>Gym Court</td>
         </tr>
         <tr>
-          <td>Indoor Basketball League</td>
+          <td>Basketball Game</td>
           <td>2026-06-12</td>
           <td>16:00</td>
-          <td>Downtown Sports Hall</td>
+          <td>Sports Hall</td>
         </tr>
         <tr>
-          <td>Community Tennis Open</td>
+          <td>Tennis Match</td>
           <td>2026-07-03</td>
           <td>09:00</td>
-          <td>Riverside Courts</td>
+          <td>Tennis Court</td>
         </tr>
       </tbody>
     </table>
@@ -193,7 +193,7 @@
       </div>
 
       <fieldset class="option-group">
-        <legend>Ticket Type</legend>
+        <legend>Ticket</legend>
         <div class="inline-options">
           <label><input type="radio" name="ticketType" value="Standard" checked /> Standard</label>
           <label><input type="radio" name="ticketType" value="VIP" /> VIP</label>
@@ -202,7 +202,7 @@
       </fieldset>
 
       <fieldset class="option-group">
-        <legend>Extra Options</legend>
+        <legend>Extras</legend>
         <div class="inline-options">
           <label><input type="checkbox" name="extras" value="Parking" /> Parking</label>
           <label><input type="checkbox" name="extras" value="Meal" /> Meal</label>
@@ -246,8 +246,14 @@
     const ageField = document.getElementById("age");
 
     registrationForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      passwordField.setCustomValidity("");
       confirmPasswordField.setCustomValidity("");
       ageField.setCustomValidity("");
+
+      if (!passwordField.value.trim()) {
+        passwordField.setCustomValidity("Password is required.");
+      }
 
       if (passwordField.value !== confirmPasswordField.value) {
         confirmPasswordField.setCustomValidity("Passwords must match.");
@@ -259,9 +265,28 @@
       }
 
       if (!registrationForm.checkValidity()) {
-        event.preventDefault();
         registrationForm.reportValidity();
+        return;
       }
+
+      const formData = new FormData(registrationForm);
+      const selectedExtras = formData.getAll("extras");
+
+      const summary = [
+        "Registration submitted successfully!",
+        "",
+        `Full Name: ${formData.get("fullName") || "-"}`,
+        `Email: ${formData.get("email") || "-"}`,
+        `Age: ${formData.get("age") || "-"}`,
+        `Ticket: ${formData.get("ticketType") || "-"}`,
+        `Extra Options: ${selectedExtras.length ? selectedExtras.join(", ") : "None"}`,
+        `Country: ${formData.get("country") || "-"}`,
+        `Event Date: ${formData.get("eventDate") || "-"}`,
+        `Arrival Time: ${formData.get("arrivalTime") || "-"}`,
+      ].join("\n");
+
+      alert(summary);
+      registrationForm.reset();
     });
   </script>
 </body>
