@@ -39,9 +39,26 @@
 		}
 
 		h1 {
-			margin: 0 0 10px;
-			font-size: clamp(2rem, 4vw, 2.6rem);
-			line-height: 1.1;
+			margin: 0 0 14px;
+			padding: 0;
+			color: #16232e;
+			font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+			font-size: clamp(2.3rem, 7vw, 3.6rem);
+			line-height: 0.92;
+			font-style: italic;
+			font-weight: 900;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			text-shadow: 0 4px 12px rgba(22, 35, 46, 0.18);
+		}
+
+		h1 span {
+			display: block;
+		}
+
+		h1 .heading-bottom {
+			font-size: 0.78em;
+			letter-spacing: 0.08em;
 		}
 
 		.instruction {
@@ -74,9 +91,10 @@
 			inset: 0;
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			justify-content: space-between;
 			gap: 18px;
-			padding: 28px;
+			padding: 80px 28px 28px;
 			border: 1px solid var(--border);
 			border-radius: var(--radius);
 			box-shadow: var(--shadow);
@@ -102,9 +120,8 @@
 		}
 
 		.back {
-			background-color: #16232e;
-			background-image: var(--card-back);
-			color: var(--text-light);
+			background: var(--card-front);
+			color: var(--text-dark);
 			transform: rotateY(180deg) translateZ(1px);
 		}
 
@@ -126,6 +143,8 @@
 			z-index: 1;
 			display: grid;
 			gap: 14px;
+			justify-items: center;
+			text-align: center;
 		}
 
 		.name {
@@ -149,13 +168,18 @@
 		.details {
 			display: grid;
 			gap: 12px;
-			text-align: left;
+			width: 100%;
+			text-align: center;
 		}
 
 		.detail {
 			padding: 14px 16px;
 			border-radius: 16px;
 			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.back .detail {
+			background: rgba(255, 255, 255, 0.45);
 		}
 
 		.detail strong {
@@ -206,15 +230,15 @@
 		}
 
 		.back .button {
-			background: #f2c14e;
-			color: #16232e;
+			background: var(--accent);
+			color: #fff;
 			transform: translateZ(1px);
 		}
 
 		.back .button:hover,
 		.back .button:focus-visible {
-			background: #ffd36c;
-			color: #111b24;
+			background: var(--accent-dark);
+			color: #fff;
 			transform: translateY(-2px) translateZ(1px);
 		}
 
@@ -229,6 +253,10 @@
 
 		.front a:hover {
 			color: #ffffff;
+		}
+
+		.back a:hover {
+			color: var(--accent-dark);
 		}
 
 		a:focus-visible,
@@ -255,8 +283,7 @@
 </head>
 <body>
 	<main>
-		<h1>&ldquo;Rodrigo Timis&rdquo; Business Card</h1>
-		<p class="instruction">Hover to flip</p>
+		<h1><span>Rodrigo Timis</span><span class="heading-bottom">Business Card</span></h1>
 
 		<div class="card-scene">
 			<div class="card">
@@ -288,13 +315,16 @@
 
 							<div class="detail">
 								<strong>Phone</strong>
-								<a href="tel:7114206967">711-420-6967</a>
+								<a href="tel:7147702258">714-770-2258</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="button-row">
-						<a class="button" href="mailto:rodrigo.timis@gmail.com?subject=Let%27s%20connect">Get in Touch</a>
+						<a class="button" href="https://www.facebook.com/profile.php?id=100003266353716" target="_blank" rel="noopener noreferrer">
+							<img class="button-icon" src="Screenshot 2026-03-12 at 9.45.11 PM.png" alt="Facebook button icon">
+							<span>Visit Facebook</span>
+						</a>
 					</div>
 				</section>
 			</div>
