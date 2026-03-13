@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rodrigo Timis Business Card</title>
+	<style>
+		:root {
+			--page-bg: linear-gradient(135deg, #f5efe4 0%, #d7e4d2 100%);
+			--card-front: linear-gradient(145deg, #fff8ef 0%, #f4dfc8 100%);
+			--card-back: linear-gradient(145deg, #213547 0%, #16232e 100%);
+			--accent: #aa3d2f;
+			--accent-dark: #822d22;
+			--text-dark: #1f2933;
+			--text-light: #f7f4ee;
+			--border: rgba(31, 41, 51, 0.12);
+			--shadow: 0 20px 45px rgba(22, 35, 46, 0.22);
+			--radius: 24px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 32px 16px;
+			font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+			background: var(--page-bg);
+			color: var(--text-dark);
+		}
+
+		main {
+			width: min(100%, 420px);
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0 0 10px;
+			font-size: clamp(2rem, 4vw, 2.6rem);
+			line-height: 1.1;
+		}
+
+		.instruction {
+			margin: 0 0 24px;
+			font-size: 0.98rem;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: #425466;
+		}
+
+		.card-scene {
+			perspective: 1200px;
+		}
+
+		.card {
+			position: relative;
+			width: 100%;
+			min-height: 540px;
+			transform-style: preserve-3d;
+			transition: transform 0.85s ease;
+		}
+
+		.card-scene:hover .card,
+		.card-scene:focus-within .card {
+			transform: rotateY(180deg);
+		}
+
+		.card-face {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 18px;
+			padding: 28px;
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			overflow: hidden;
+			opacity: 1;
+		}
+
+		.card-face::before {
+			content: "";
+			position: absolute;
+			inset: auto -70px -80px auto;
+			width: 190px;
+			height: 190px;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.18);
+			pointer-events: none;
+		}
+
+		.front {
+			background: var(--card-front);
+		}
+
+		.back {
+			background-color: #16232e;
+			background-image: var(--card-back);
+			color: var(--text-light);
+			transform: rotateY(180deg) translateZ(1px);
+		}
+
+		.profile-image {
+			position: relative;
+			z-index: 1;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 5px solid rgba(255, 255, 255, 0.72);
+			box-shadow: 0 14px 28px rgba(31, 41, 51, 0.18);
+		}
+
+		.front-content,
+		.back-content {
+			position: relative;
+			z-index: 1;
+			display: grid;
+			gap: 14px;
+		}
+
+		.name {
+			margin: 0;
+			font-size: 2rem;
+			line-height: 1.1;
+		}
+
+		.role {
+			margin: 0;
+			font-size: 1.05rem;
+			color: #5d4638;
+		}
+
+		.bio {
+			margin: 0;
+			font-size: 1rem;
+			line-height: 1.7;
+		}
+
+		.details {
+			display: grid;
+			gap: 12px;
+			text-align: left;
+		}
+
+		.detail {
+			padding: 14px 16px;
+			border-radius: 16px;
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.detail strong {
+			display: block;
+			margin-bottom: 4px;
+			font-size: 0.82rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.button-row {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			margin-top: auto;
+		}
+
+		.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			min-width: 170px;
+			padding: 14px 20px;
+			border: 2px solid transparent;
+			border-radius: 999px;
+			background: var(--accent);
+			color: #fff;
+			font-weight: 700;
+			text-decoration: none;
+			transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+		}
+
+		.button-icon {
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			object-fit: cover;
+			flex-shrink: 0;
+			border: 1px solid rgba(255, 255, 255, 0.45);
+		}
+
+		.button:hover,
+		.button:focus-visible {
+			background: var(--accent-dark);
+			transform: translateY(-2px);
+		}
+
+		.back .button {
+			background: #f2c14e;
+			color: #16232e;
+			transform: translateZ(1px);
+		}
+
+		.back .button:hover,
+		.back .button:focus-visible {
+			background: #ffd36c;
+			color: #111b24;
+			transform: translateY(-2px) translateZ(1px);
+		}
+
+		a {
+			color: inherit;
+			transition: color 0.2s ease;
+		}
+
+		a:hover {
+			color: #ffd36c;
+		}
+
+		.front a:hover {
+			color: #ffffff;
+		}
+
+		a:focus-visible,
+		.button:focus-visible {
+			outline: 3px solid #ffe39a;
+			outline-offset: 4px;
+			border-color: #ffe39a;
+		}
+
+		@media (max-width: 480px) {
+			.card {
+				min-height: 560px;
+			}
+
+			.card-face {
+				padding: 22px;
+			}
+
+			.name {
+				font-size: 1.75rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>&ldquo;Rodrigo Timis&rdquo; Business Card</h1>
+		<p class="instruction">Hover to flip</p>
+
+		<div class="card-scene">
+			<div class="card">
+				<section class="card-face front" aria-label="Front side of business card">
+					<img class="profile-image" src="IMG_5616.jpg" alt="Portrait of Rodrigo Timis">
+
+					<div class="front-content">
+						<h2 class="name">Rodrigo Timis</h2>
+						<p class="role">toodle-er</p>
+					</div>
+
+					<div class="button-row">
+							<a class="button" href="https://www.facebook.com/profile.php?id=100003266353716" target="_blank" rel="noopener noreferrer">
+								<img class="button-icon" src="Screenshot 2026-03-12 at 9.45.11 PM.png" alt="Facebook button icon">
+								<span>Visit Facebook</span>
+							</a>
+					</div>
+				</section>
+
+				<section class="card-face back" aria-label="Back side of business card">
+					<div class="back-content">
+							<p class="bio">I toodle and poodle things.<br>But I can getcha free chicken wings.</p>
+
+						<div class="details">
+							<div class="detail">
+								<strong>Email</strong>
+								<a href="mailto:rodrigo.timis@gmail.com">rodrigo.timis@gmail.com</a>
+							</div>
+
+							<div class="detail">
+								<strong>Phone</strong>
+								<a href="tel:7114206967">711-420-6967</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="button-row">
+						<a class="button" href="mailto:rodrigo.timis@gmail.com?subject=Let%27s%20connect">Get in Touch</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
