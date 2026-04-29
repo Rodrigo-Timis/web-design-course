@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1776752493.23033 "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" "rt-sub.pdf" "rt-sub" 1776752493.69606 0
-  "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" 1776752493.13684 674 59add0a83f3f691c39c1cc254fd56e72 ""
+["pdflatex"] 1777445124.76114 "/Users/rodrigotimis/Documents/web-design-course/todo-app/submission-pdf/rt-sub.tex" "rt-sub.pdf" "rt-sub" 1777445125.26991 0
+  "/Users/rodrigotimis/Documents/web-design-course/todo-app/submission-pdf/rt-sub.tex" 1777445119.84429 945 f7c7c927dfa24b99af34997cb9a12165 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -53,10 +53,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1764987190 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "image-3.png" 1776751183.8061 187720 6a28facfcd7d3407d827acf51f2fce82 ""
-  "rt-sub.aux" 1776752493.67502 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "rt-sub.out" 1776752493.42687 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "rt-sub.tex" 1776752493.13684 674 59add0a83f3f691c39c1cc254fd56e72 ""
+  "4D7D9870-1627-4B0C-B251-3C4E9E560639.png" 1777443938.28795 139346 cbdda07651d5399c6f9390cfe925ef55 ""
+  "58D78F82-CCFB-4E67-BEFD-8D31B516B615.png" 1777443906.09801 181409 631f1dd54dbecc41462de8f4c04d1105 ""
+  "rt-sub.aux" 1777445125.24773 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "rt-sub.out" 1777445124.9737 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "rt-sub.tex" 1777445119.84429 945 f7c7c927dfa24b99af34997cb9a12165 ""
   (generated)
   "rt-sub.aux"
   "rt-sub.log"
