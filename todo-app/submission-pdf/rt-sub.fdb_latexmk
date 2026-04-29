@@ -1,14 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1777444648.26244 "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" "rt-sub.pdf" "rt-sub" 1777444648.59216 2
-  "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" 1777444648.01481 703 eaaa2d533a2d561c40be7b9b208c06bc ""
+["pdflatex"] 1776752493.23033 "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" "rt-sub.pdf" "rt-sub" 1776752493.69606 0
+  "/Users/rodrigotimis/Documents/web-design-course/assignment2-drawing-app/submission-pdf/rt-sub.tex" 1776752493.13684 674 59add0a83f3f691c39c1cc254fd56e72 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -55,10 +53,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1764987190 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "58D78F82-CCFB-4E67-BEFD-8D31B516B615.png" 0 -1 0 ""
-  "rt-sub.aux" 1777444648.56937 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "rt-sub.out" 1777444648.46451 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "rt-sub.tex" 1777444648.01481 703 eaaa2d533a2d561c40be7b9b208c06bc ""
+  "image-3.png" 1776751183.8061 187720 6a28facfcd7d3407d827acf51f2fce82 ""
+  "rt-sub.aux" 1776752493.67502 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "rt-sub.out" 1776752493.42687 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "rt-sub.tex" 1776752493.13684 674 59add0a83f3f691c39c1cc254fd56e72 ""
   (generated)
   "rt-sub.aux"
   "rt-sub.log"
